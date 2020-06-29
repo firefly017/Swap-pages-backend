@@ -1,29 +1,16 @@
-"use strict";
+'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const book = sequelize.define(
-    "book",
-    {
-      title: DataTypes.STRING,
-      author: DataTypes.STRING,
-      borrowCount: DataTypes.INTEGER,
-      borrowerId: DataTypes.INTEGER,
-      lenderId: DataTypes.INTEGER,
-      genreId: DataTypes.INTEGER,
-    },
-    {}
-  );
-  book.associate = function (models) {
+  const book = sequelize.define('book', {
+    title: DataTypes.STRING,
+    author: DataTypes.STRING,
+    imageUrl: DataTypes.STRING,
+    ISBN: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    borrowCount: DataTypes.INTEGER,
+    available: DataTypes.BOOLEAN
+  }, {});
+  book.associate = function(models) {
     // associations can be defined here
-    // Book.belongsTo(models.User, {
-    //   as: "owner",
-    //   foreignKey: "ownerId",
-    //   targetKey: "id",
-    // });
-    // Book.belongsTo(models.User, {
-    //   as: "borrower",
-    //   foreignKey: "borrowerId",
-    //   targetKey: "id",
-    // });
   };
   return book;
 };
