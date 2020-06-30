@@ -1,16 +1,39 @@
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
-  const book = sequelize.define('book', {
-    title: DataTypes.STRING,
-    author: DataTypes.STRING,
-    imageUrl: DataTypes.STRING,
-    ISBN: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    borrowCount: DataTypes.INTEGER,
-    available: DataTypes.BOOLEAN
-  }, {});
-  book.associate = function(models) {
+  const book = sequelize.define(
+    "book",
+    {
+      title: { type: DataTypes.STRING, allowNull: false },
+      author: { type: DataTypes.STRING, allowNull: false },
+      imageUrl: { type: DataTypes.STRING, allowNull: false },
+      ISBN: { type: DataTypes.STRING, allowNull: false },
+      description: { type: DataTypes.TEXT, allowNull: false },
+      borrowCount: { type: DataTypes.INTEGER, allowNull: true },
+      available: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
+    },
+    {}
+  );
+  book.associate = function (models) {
     // associations can be defined here
+    book.belongsTo(models.user);
+    book.hasMany(models.bookGenre);
+    book.hasMany(models.borrowedBooks);
+    // book.hasOne(models.user, {
+    //   through: "borrowedbook",
+    //   foreignKey: "userId",
+    // });
+    // book.belongsToMany(models.genre, {
+    //   through: "bookgenres",
+    //   foreignKey: "genreId",
+    // });
+    // book.belongsToMany(models.user, {
+    //   through: "borrowedbooks",
+    //   foreignKey: "userId",
+    // });
   };
   return book;
 };
