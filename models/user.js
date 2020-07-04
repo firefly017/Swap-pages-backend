@@ -5,22 +5,27 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       email: {
         type: DataTypes.STRING,
         unique: true,
-        allowNull: false
+        allowNull: false,
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: false
-      }
+        allowNull: false,
+      },
+      phone: DataTypes.INTEGER,
+      locLat: DataTypes.DECIMAL,
+      locLong: DataTypes.DECIMAL,
     },
     {}
   );
-  user.associate = function(models) {
+  user.associate = function (models) {
     // associations can be defined here
+    user.hasMany(models.book);
+    user.hasMany(models.borrowedBooks);
   };
   return user;
 };
