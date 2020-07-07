@@ -7,13 +7,13 @@ module.exports = {
       [
         {
           id: 1,
-          title: "Sapiens:A Brief History of Humankind",
-          author: "Yuval Noah Harrari",
+          title: "Padma Nadir Majhi",
+          author: "Manik Bandopadhyay",
           imageUrl:
-            "https://www.bookspot.nl/images/active/carrousel/fullsize/9780062316097_front.jpg",
-          ISBN: "144819069X",
+            "https://bnetbazaar.com/product_image/book/p-bk-C9TH-6088/t_1.jpg",
+          ISBN: "198410747X",
           description:
-            "Sapiens: A Brief History of Humankind is a book by Yuval Noah Harari, first published in Hebrew in Israel in 2011 based on a series of lectures Harari taught at The Hebrew University of Jerusalem, and in English in 2014.",
+            "Padma Nadir Majhi (Boatman of the River Padma or The Padma Boatman) is Manik Bandyopadhyay's the most widely read novels, discussed and translated into several foreign languages.This is the fourth novel of Manik Bandopadhyay. The novel has been continuously published in Purbasha magazine since 1934and was published in 1936.",
           borrowCount: 0,
           available: true,
           userId: 2,
@@ -37,13 +37,13 @@ module.exports = {
         },
         {
           id: 3,
-          title: "The Book Thief",
-          author: "Markus Zusak",
+          title: "Sapiens:A Brief History of Humankind",
+          author: "Yuval Noah Harrari",
           imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/91pZEozf9qL.jpg",
-          ISBN: "9780375831003",
+            "https://www.bookspot.nl/images/active/carrousel/fullsize/9780062316097_front.jpg",
+          ISBN: "144819069X",
           description:
-            "The Book Thief is a historical novel by Australian author Markus Zusak, and is his most popular work. Published in 2005, The Book Thief became an international bestseller and was translated into 63 languages and sold 16 million copies. It was adapted into a 2013 feature film of the same name.",
+            "Sapiens: A Brief History of Humankind is a book by Yuval Noah Harari, first published in Hebrew in Israel in 2011 based on a series of lectures Harari taught at The Hebrew University of Jerusalem, and in English in 2014.",
           borrowCount: 0,
           available: true,
           userId: 2,
@@ -62,6 +62,21 @@ module.exports = {
           borrowCount: 0,
           available: true,
           userId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          id: 5,
+          title: "The Book Thief",
+          author: "Markus Zusak",
+          imageUrl:
+            "https://images-na.ssl-images-amazon.com/images/I/91pZEozf9qL.jpg",
+          ISBN: "9780375831003",
+          description:
+            "The Book Thief is a historical novel by Australian author Markus Zusak, and is his most popular work. Published in 2005, The Book Thief became an international bestseller and was translated into 63 languages and sold 16 million copies. It was adapted into a 2013 feature film of the same name.",
+          borrowCount: 0,
+          available: true,
+          userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
