@@ -8,7 +8,11 @@ module.exports = (sequelize, DataTypes) => {
       imageUrl: { type: DataTypes.STRING, allowNull: false },
       ISBN: { type: DataTypes.STRING, allowNull: false },
       description: { type: DataTypes.TEXT, allowNull: false },
-      borrowCount: { type: DataTypes.INTEGER, allowNull: true },
+      borrowCount: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+      },
       available: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
