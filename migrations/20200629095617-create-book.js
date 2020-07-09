@@ -31,6 +31,7 @@ module.exports = {
       borrowCount: {
         type: Sequelize.INTEGER,
         allowNull: true,
+        defaultValue: 0,
       },
       available: {
         type: Sequelize.BOOLEAN,
