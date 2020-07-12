@@ -19,6 +19,8 @@ module.exports = {
           userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
+          loclat: 52.379648,
+          loclong: 5.193728,
         },
         {
           id: 2,
@@ -34,6 +36,8 @@ module.exports = {
           userId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
+          loclat: 52.379266,
+          loclong: 4.900977,
         },
         {
           id: 3,
@@ -49,6 +53,8 @@ module.exports = {
           userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
+          loclat: 52.379266,
+          loclong: 4.900977,
         },
         {
           id: 4,
@@ -64,6 +70,8 @@ module.exports = {
           userId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
+          loclat: 52.381481,
+          loclong: 4.60477,
         },
         {
           id: 5,
@@ -79,6 +87,8 @@ module.exports = {
           userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
+          loclat: 52.381481,
+          loclong: 4.60477,
         },
       ],
       {}
