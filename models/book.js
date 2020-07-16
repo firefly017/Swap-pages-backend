@@ -18,6 +18,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         defaultValue: true,
       },
+      loclat: DataTypes.DECIMAL,
+      loclong: DataTypes.DECIMAL,
     },
     {}
   );

@@ -46,6 +46,12 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
+      loclat: {
+        type: Sequelize.DECIMAL,
+      },
+      loclong: {
+        type: Sequelize.DECIMAL,
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
