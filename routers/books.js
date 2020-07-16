@@ -3,13 +3,14 @@ const { Router } = require("express");
 const Sequelize = require("sequelize");
 
 const Books = require("../models").book;
+const Users = require("../models").user;
 
 const router = new Router();
 const Op = Sequelize.Op;
 
 router.get("/", async (req, res, next) => {
   try {
-    const books = await Books.findAll();
+    const books = await Books.findAll({ include: [Users] });
     res.send(books);
   } catch (e) {
     next(e);
@@ -21,6 +22,7 @@ router.get("/search/", async (req, res, next) => {
   const lng = req.query.lng;
 
   let qry = {
+    include: Users,
     where: {
       [Op.or]: [
         {
@@ -42,6 +44,7 @@ router.get("/search/", async (req, res, next) => {
       ...qry,
       attributes: [
         ...Object.keys(Books.rawAttributes),
+        // ...Object.keys(Users.rawAttributes),
         [
           Sequelize.literal(
             "6371 * acos(cos(radians(" +
@@ -63,6 +66,7 @@ router.get("/search/", async (req, res, next) => {
 
     let books = await Books.findAll(qry);
     console.log(books);
+    // console.log(user, "usedata");
     // const books = await Books.findByPk(req.params.id);
     res.send(books);
   } catch (e) {
